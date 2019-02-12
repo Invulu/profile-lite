@@ -1,6 +1,6 @@
 === Profile Lite ===
 
-Version: 1.0.3
+Version: 1.0.4
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.9
@@ -32,7 +32,7 @@ Profile Lite is distributed under the terms of the GNU GPL
 * close.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * menu.png: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
-* default-header.jpg: Source: Pexels, https://www.pexels.com/photo/alone-animal-bird-clouds-395196/. Pexels license, https://www.pexels.com/photo-license/.
+* default-header.jpg: Source: Stock Snap, https://stocksnap.io/photo/BB5OTE559V. Creative Commons CC0 license, https://stocksnap.io/license.
 
 == Font Awesome ==
 
@@ -46,6 +46,9 @@ Profile Lite is distributed under the terms of the GNU GPL
 * TGM-Plugin-Activation (plugin-activation.php, plugin-activation-class.php), Released under the GPL v2 license, http://opensource.org/licenses/gpl-2.0.php
 
 == Changelog ==
+
+== 1.0.4 ==
+* Default header image updated again to Stock Snap image
 
 == 1.0.3 ==
 * Updated posted_on function fixing translatable string
