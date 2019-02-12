@@ -101,7 +101,16 @@
 		<!-- END #header-info -->
 		</div>
 
-		<?php if ( is_page_template( 'template-home.php' ) || is_singular() && ! has_post_thumbnail() || is_home() || is_archive() || is_search() || is_attachment() || is_404() ) { ?>
+		<?php
+		global $post;
+		if ( $post ) {
+			$page_template = get_page_template_slug( $post->ID );
+		} else {
+			$page_template = false;
+		}
+		?>
+
+		<?php if ( is_page_template( 'template-home.php' ) || is_front_page() || is_singular() && ! has_post_thumbnail() || is_home() || is_archive() || is_search() || is_attachment() || is_404() ) { ?>
 
 			<!-- BEGIN #custom-header -->
 			<div id="custom-header">
@@ -109,7 +118,7 @@
 				<!-- BEGIN .row -->
 				<div class="row">
 
-					<?php if ( is_page() && ! empty( $post->post_excerpt ) ) { ?>
+					<?php if ( is_page() && ! empty( $post->post_excerpt ) && 'templates/organic-custom-template.php' !== $page_template ) { ?>
 						<div class="img-title vertical-center">
 							<div class="excerpt"><?php the_excerpt(); ?></div>
 						</div>
@@ -122,15 +131,6 @@
 
 			<!-- END #custom-header -->
 			</div>
-
-			<?php
-			global $post;
-			if ( $post ) {
-				$page_template = get_page_template_slug( $post->ID );
-			} else {
-				$page_template = false;
-			}
-			?>
 
 			<?php if ( has_custom_logo() || has_custom_logo() && 'templates/organic-custom-template.php' !== $page_template ) { ?>
 

@@ -19,10 +19,11 @@ function profile_lite_fonts_url() {
 	*/
 
 	$roboto           = _x( 'on', 'Roboto font: on or off', 'profile-lite' );
+	$roboto_condensed = _x( 'on', 'Roboto Condensed font: on or off', 'profile-lite' );
 	$roboto_slab      = _x( 'on', 'Roboto Slab font: on or off', 'profile-lite' );
 	$raleway          = _x( 'on', 'Raleway font: on or off', 'profile-lite' );
 
-	if ( 'off' !== $raleway || 'off' !== $roboto || 'off' !== $roboto_slab ) {
+	if ( 'off' !== $raleway || 'off' !== $roboto || 'off' !== $roboto_condensed || 'off' !== $roboto_slab ) {
 
 		$font_families = array();
 
@@ -32,6 +33,10 @@ function profile_lite_fonts_url() {
 
 		if ( 'off' !== $roboto ) {
 			$font_families[] = 'Roboto:300,300i,400,400i,700,700i';
+		}
+
+		if ( 'off' !== $roboto_condensed ) {
+			$font_families[] = 'Roboto Slab:300,400,700';
 		}
 
 		if ( 'off' !== $roboto_slab ) {

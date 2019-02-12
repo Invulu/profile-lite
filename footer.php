@@ -27,7 +27,7 @@
 		<!-- END .row -->
 		</div>
 
-		<?php } ?>
+	<?php } ?>
 
 	<!-- BEGIN .row -->
 	<div class="row">

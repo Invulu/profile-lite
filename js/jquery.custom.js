@@ -66,6 +66,18 @@
     }
   }
 
+  /* Check The Background Brightness ---------------------*/
+  function checkBrightness() {
+    if ( $('.banner-img').length ) {
+      $('.banner-img').backgroundBrightness();
+    }
+    if ( $('.wp-custom-header').length ) {
+      $('.wp-custom-header').backgroundBrightness();
+    }
+    $('body').backgroundBrightness();
+    $('#custom-header').backgroundBrightness();
+  }
+
   function modifyPosts() {
 
     /* Toggle Mobile Menu Icon ---------------------*/
@@ -93,25 +105,13 @@
     /* Fit Vids ---------------------*/
     $('.content').fitVids();
 
-    /* Check Element BG Brightness ---------------------*/
-    if ( $('.banner-img').length ) {
-      $('.banner-img').bgBrightness();
-    }
-
-    if ( $('.wp-custom-header').length ) {
-      $('.wp-custom-header').bgBrightness();
-    }
-
-    /* Check Element BG Color ---------------------*/
-    $('body').bgBrightness();
-    $('#header').bgBrightness();
-
   }
 
   $( document )
   .ready( removeNoJsClass )
   .ready( sidrMenu )
   .ready( menuOffset )
+  .ready( checkBrightness )
   .ready( modifyPosts )
   .on( 'post-load', modifyPosts );
 

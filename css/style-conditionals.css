@@ -4,55 +4,48 @@
 
 /* Background Image Brightness */
 
-#header .excerpt.profile-lite-bg-dark p,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-dark .site-title a,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-dark .site-title a:link,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-dark .site-title a:visited,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-dark .site-description,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-dark .excerpt,
+#custom-header.profile-lite-bg-dark .site-title a,
+#custom-header.profile-lite-bg-dark .site-title a:link,
+#custom-header.profile-lite-bg-dark .site-title a:visited,
+#custom-header.profile-lite-bg-dark .site-description,
+#custom-header.profile-lite-bg-dark .img-headline,
 .site-info.profile-lite-bg-dark .site-title a,
 .site-info.profile-lite-bg-dark .site-title a:link,
-.site-info.profile-lite-bg-dark .site-title a:visited,
-.site-info.profile-lite-bg-dark .site-description {
+.site-info.profile-lite-bg-dark .site-title a:visited {
 	color: #ffffff;
 }
-#header .excerpt.profile-lite-bg-light p,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-light .site-title a,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-light .site-title a:link,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-light .site-title a:visited,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-light .site-description,
-.profile-header-inactive.profile-no-img #header.profile-lite-bg-light .excerpt,
+#custom-header.profile-lite-bg-dark p,
+.site-info.profile-lite-bg-dark .site-description {
+	color: rgba(255, 255, 255, 0.8);
+}
+#custom-header.profile-lite-bg-light .site-title a,
+#custom-header.profile-lite-bg-light .site-title a:link,
+#custom-header.profile-lite-bg-light .site-title a:visited,
+#custom-header.profile-lite-bg-light .site-description,
+#custom-header.profile-lite-bg-light .excerpt p,
+#custom-header.profile-lite-bg-light .img-headline,
 .site-info.profile-lite-bg-light .site-title a,
 .site-info.profile-lite-bg-light .site-title a:link,
-.site-info.profile-lite-bg-light .site-title a:visited,
-.site-info.profile-lite-bg-light .site-description {
+.site-info.profile-lite-bg-light .site-title a:visited {
 	color: #000000;
 }
+#custom-header.profile-lite-bg-light p,
+.site-info.profile-lite-bg-light .site-description {
+	color: rgba(0, 0, 0, 0.8);
+}
 .profile-lite-bg-dark h1, .profile-lite-bg-dark h2, .profile-lite-bg-dark h3,
-.profile-lite-bg-dark h4, .profile-lite-bg-dark h5, .profile-lite-bg-dark h6,
-.profile-lite-bg-light .profile-lite-bg-dark h1, .profile-lite-bg-light .profile-lite-bg-dark h2,
-.profile-lite-bg-light .profile-lite-bg-dark h3, .profile-lite-bg-light .profile-lite-bg-dark h4,
-.profile-lite-bg-light .profile-lite-bg-dark h5, .profile-lite-bg-light .profile-lite-bg-dark h6,
-.profile-lite-bg-light .profile-lite-bg-dark .img-headline, .profile-lite-bg-dark .img-headline {
+.profile-lite-bg-dark h4, .profile-lite-bg-dark h5, .profile-lite-bg-dark h6 {
 	color: #ffffff;
 }
-.profile-lite-bg-dark, .profile-lite-bg-dark p, .profile-lite-bg-dark blockquote,
-.profile-lite-bg-light .profile-lite-bg-dark, .profile-lite-bg-light .profile-lite-bg-dark p,
-.profile-lite-bg-light .profile-lite-bg-dark blockquote {
+.profile-lite-bg-dark, .profile-lite-bg-dark .container p, .profile-lite-bg-dark .container blockquote {
 	color: rgba(255, 255, 255, 0.8);
 	border-color: #ffffff;
 }
 .profile-lite-bg-light h1, .profile-lite-bg-light h2, .profile-lite-bg-light h3,
-.profile-lite-bg-light h4, .profile-lite-bg-light h5, .profile-lite-bg-light h6,
-.profile-lite-bg-dark .profile-lite-bg-light h1, .profile-lite-bg-dark .profile-lite-bg-light h2,
-.profile-lite-bg-dark .profile-lite-bg-light h3, .profile-lite-bg-dark .profile-lite-bg-light h4,
-.profile-lite-bg-dark .profile-lite-bg-light h5, .profile-lite-bg-dark .profile-lite-bg-light h6,
-.profile-lite-bg-dark .profile-lite-bg-light .img-headline, .profile-lite-bg-light .img-headline {
+.profile-lite-bg-light h4, .profile-lite-bg-light h5, .profile-lite-bg-light h6 {
 	color: #000000;
 }
-.profile-lite-bg-light, .profile-lite-bg-light p, .profile-lite-bg-light blockquote,
-.profile-lite-bg-dark .profile-lite-bg-light, .profile-lite-bg-dark .profile-lite-bg-light p,
-.profile-lite-bg-dark .profile-lite-bg-light blockquote {
+.profile-lite-bg-light, .profile-lite-bg-light .container p, .profile-lite-bg-light .container blockquote {
 	color: rgba(0, 0, 0, 0.6);
 }
 .profile-lite-bg-light .img-title .post-author a {
@@ -75,7 +68,7 @@
 }
 .profile-sidebar-active .hentry .content,
 .profile-sidebar-active .content.shop {
-	max-width: 1180px;
+	max-width: 1240px;
 }
 .profile-sidebar-active .blog-holder,
 .profile-sidebar-active .archive-holder {

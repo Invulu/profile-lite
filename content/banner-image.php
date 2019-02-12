@@ -17,7 +17,7 @@
 	<!-- BEGIN .row -->
 	<header class="row" role="banner">
 
-		<div class="featured-img banner-img" style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);">
+		<div id="custom-header" class="featured-img banner-img" style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);">
 			<?php if ( is_page() && '1' == get_theme_mod( 'display_img_title_page', '1' ) || is_single() && '1' == get_theme_mod( 'display_img_title_post', '1' ) ) { ?>
 				<div class="img-title vertical-center">
 					<h1 class="img-headline"><?php the_title(); ?></h1>

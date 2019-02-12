@@ -38,8 +38,6 @@ if ( ! function_exists( 'profile_lite_setup' ) ) :
 
 		add_image_size( 'profile-featured-large', 2400, 1800, true ); // Large Featured Image.
 		add_image_size( 'profile-featured-medium', 1200, 1200, false ); // Medium Featured Image.
-		add_image_size( 'profile-featured-small', 640, 640, true ); // Small Featured Image.
-		add_image_size( 'profile-featured-square', 1200, 1200, true ); // Square Featured Image.
 
 		/*
 		* Enable support for site title tag.
@@ -231,15 +229,22 @@ if ( ! function_exists( 'profile_lite_posted_on' ) ) :
 
 	/** Function profile_lite_posted_on */
 	function profile_lite_posted_on() {
-		/* translators: 1: posted wrapper, 2: date and time permalink */
-		printf( esc_html__( '%1$s %2$s', 'profile-lite' ),
-			'<span class="meta-prep meta-prep-author">Posted:</span>',
-			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				get_the_date( get_option( 'date_format' ) )
-			)
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		}
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
 		);
+		$posted_on = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( 'Posted: %s', 'post date', 'profile-lite' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
+		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 	}
 
 endif;
@@ -498,7 +503,7 @@ if ( ! function_exists( 'profile_lite_body_class' ) ) :
 			$classes[] = 'profile-sidebar-1';
 		}
 
-		if ( is_active_sidebar( 'sidebar-1' ) && ! is_page_template( 'template-full.php' ) ) {
+		if ( is_active_sidebar( 'sidebar-1' ) && ! is_page_template( 'template-full.php' ) && ! is_page_template( 'template-home.php' ) ) {
 			$classes[] = 'profile-sidebar-active';
 		} else {
 			$classes[] = 'profile-sidebar-inactive';

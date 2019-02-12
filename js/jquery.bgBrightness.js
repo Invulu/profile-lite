@@ -1,5 +1,5 @@
 /*
- *  bgBrightness.js
+ *  backgroundBrightness.js
  *
  *  Copyright 2016, Jesse Lee & Organic Themes w/ snippets from ColourBrightness.js
  *  Released under the WTFPL license
@@ -14,7 +14,7 @@
 
     $.fn.extend({
 
-      bgBrightness: function (contentSelectors, threshold) {
+      backgroundBrightness: function (contentSelectors, threshold) {
 
       // RGB Brightness Threshold
       var threshold = 160;
@@ -115,7 +115,7 @@
 
       function getImageLightness(imageSrc, imgObject, callback) {
         var img = document.createElement("img");
-        img.crossProfile = "Anonymous";
+        img.crossOrigin = "Anonymous";
         img.src = imageSrc;
         img.style.display = "none";
         document.body.appendChild(img);
@@ -165,7 +165,7 @@
         return { bgColor: bgColor, bgImage: bgImage, targetedElement: el };
       }
 
-    } // End bgBrightness(){}
+    } // End backgroundBrightness(){}
 
   })
 

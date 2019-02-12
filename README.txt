@@ -1,6 +1,6 @@
 === Profile Lite ===
 
-Version: 1.0
+Version: 1.0.3
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.9
@@ -32,7 +32,7 @@ Profile Lite is distributed under the terms of the GNU GPL
 * close.svg: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * menu.png: Created by David Morgan, http://dav.idmorgan.com. License: GPLv2.
 * screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
-* default-header.jpg: Source: Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+* default-header.jpg: Source: Pexels, https://www.pexels.com/photo/alone-animal-bird-clouds-395196/. Pexels license, https://www.pexels.com/photo-license/.
 
 == Font Awesome ==
 
@@ -41,9 +41,27 @@ Profile Lite is distributed under the terms of the GNU GPL
 
 == Scripts ==
 
-* jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/.
+* jquery.fitvids.js, Released under the WTFPL license, http://sam.zoy.org/wtfpl/
+* jquery.sidr.js, Released under the MIT license, https://github.com/artberri/sidr/blob/master/LICENSE
+* TGM-Plugin-Activation (plugin-activation.php, plugin-activation-class.php), Released under the GPL v2 license, http://opensource.org/licenses/gpl-2.0.php
 
 == Changelog ==
+
+== 1.0.3 ==
+* Updated posted_on function fixing translatable string
+* Added missing script licensing info in README
+* Replaced default-header.jpg with an image from Pexels
+
+== 1.0.2 ==
+* Updated screenshot image
+* Body class function fix for home page template
+* Style tweaks
+
+== 1.0.1 ==
+* Fixed error associated with wp_kses_post function in header
+* Replaced default-header.jpg with an image from Pixabay
+* Removed unused featured image sizes
+* Various style and script updates
 
 == 1.0 ==
 * Initial theme release
