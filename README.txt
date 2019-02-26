@@ -1,6 +1,6 @@
 === Profile Lite ===
 
-Version: 1.0.7
+Version: 1.0.8
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.9
@@ -46,6 +46,10 @@ Profile Lite is distributed under the terms of the GNU GPL
 * TGM-Plugin-Activation (plugin-activation.php, plugin-activation-class.php), Released under the GPL v2 license, http://opensource.org/licenses/gpl-2.0.php
 
 == Changelog ==
+
+== 1.0.8 ==
+* Updated background brightness script function name
+* Updated conditional styles for background brightness script
 
 == 1.0.7 ==
 * Added admin notification

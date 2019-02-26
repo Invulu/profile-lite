@@ -66,13 +66,13 @@
   /* Check The Background Brightness ---------------------*/
   function checkBrightness() {
     if ( $('.banner-img').length ) {
-      $('.banner-img').backgroundBrightness();
+      $('.banner-img').bgBrightness();
     }
     if ( $('.wp-custom-header').length ) {
-      $('.wp-custom-header').backgroundBrightness();
+      $('.wp-custom-header').bgBrightness();
     }
-    $('body').backgroundBrightness();
-    $('#custom-header').backgroundBrightness();
+    $('body').bgBrightness();
+    $('#custom-header').bgBrightness();
   }
 
   function modifyPosts() {

@@ -34,18 +34,29 @@
 	color: rgba(0, 0, 0, 0.8);
 }
 .profile-lite-bg-dark h1, .profile-lite-bg-dark h2, .profile-lite-bg-dark h3,
-.profile-lite-bg-dark h4, .profile-lite-bg-dark h5, .profile-lite-bg-dark h6 {
+.profile-lite-bg-dark h4, .profile-lite-bg-dark h5, .profile-lite-bg-dark h6,
+.profile-lite-bg-light .profile-lite-bg-dark h1, .profile-lite-bg-light .profile-lite-bg-dark h2,
+.profile-lite-bg-light .profile-lite-bg-dark h3, .profile-lite-bg-light .profile-lite-bg-dark h4,
+.profile-lite-bg-light .profile-lite-bg-dark h5, .profile-lite-bg-light .profile-lite-bg-dark h6,
+.profile-lite-bg-light .profile-lite-bg-dark .img-headline, .profile-lite-bg-dark .img-headline {
 	color: #ffffff;
 }
-.profile-lite-bg-dark, .profile-lite-bg-dark .container p, .profile-lite-bg-dark .container blockquote {
+.profile-lite-bg-dark, .profile-lite-bg-dark p, .profile-lite-bg-dark blockquote,
+.profile-lite-bg-light .profile-lite-bg-dark, .profile-lite-bg-light .profile-lite-bg-dark p,
+.profile-lite-bg-light .profile-lite-bg-dark blockquote {
 	color: rgba(255, 255, 255, 0.8);
-	border-color: #ffffff;
 }
 .profile-lite-bg-light h1, .profile-lite-bg-light h2, .profile-lite-bg-light h3,
-.profile-lite-bg-light h4, .profile-lite-bg-light h5, .profile-lite-bg-light h6 {
+.profile-lite-bg-light h4, .profile-lite-bg-light h5, .profile-lite-bg-light h6,
+.profile-lite-bg-dark .profile-lite-bg-light h1, .profile-lite-bg-dark .profile-lite-bg-light h2,
+.profile-lite-bg-dark .profile-lite-bg-light h3, .profile-lite-bg-dark .profile-lite-bg-light h4,
+.profile-lite-bg-dark .profile-lite-bg-light h5, .profile-lite-bg-dark .profile-lite-bg-light h6,
+.profile-lite-bg-dark .profile-lite-bg-light .img-headline, .profile-lite-bg-light .img-headline {
 	color: #000000;
 }
-.profile-lite-bg-light, .profile-lite-bg-light .container p, .profile-lite-bg-light .container blockquote {
+.profile-lite-bg-light, .profile-lite-bg-light p, .profile-lite-bg-light blockquote,
+.profile-lite-bg-dark .profile-lite-bg-light, .profile-lite-bg-dark .profile-lite-bg-light p,
+.profile-lite-bg-dark .profile-lite-bg-light blockquote {
 	color: rgba(0, 0, 0, 0.6);
 }
 .profile-lite-bg-light .img-title .post-author a {
