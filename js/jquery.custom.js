@@ -25,33 +25,30 @@
 
   /* Submenu Offset Fix ---------------------*/
   function menuOffset() {
-    // Fix menu if off screen.
-    var mainWindowWidth = $(window).width() + 180;
+    var mainWindowWidth = $(window).width() + 120;
 
-    $('#navigation ul.menu li.menu-item-has-children').mouseover(function() {
+    $('ul.menu li.menu-item-has-children').mouseover(function() {
 
-      // Checks if second level menu exist.
+      // Checks if third level menu exist
       var subMenuExist = $(this).find('.sub-menu').length;
-
-      if ( subMenuExist > 0 ) {
+      if (subMenuExist > 0) {
         var subMenuWidth = $(this).find('.sub-menu').width();
         var subMenuOffset = $(this).find('.sub-menu').parent().offset().left + subMenuWidth;
 
-        // If sub menu is off screen, give new position.
-        if ( (subMenuOffset + subMenuWidth) > mainWindowWidth ) {
+        // If sub menu is off screen, give new position
+        if ((subMenuOffset + subMenuWidth) > mainWindowWidth) {
           var newSubMenuPosition = subMenuWidth;
-          $(this).find('ul.sub-menu').css({
-            right: 0,
+          $(this).find('.sub-menu').css({
             left: 'auto',
-          });
-          $(this).find('ul.sub-menu ul.sub-menu').css({
-            left: -newSubMenuPosition - 24,
-            right: 'auto',
-          });
+            right: '0'
+          })
+          $(this).find('.sub-menu .sub-menu').css({
+            left: -newSubMenuPosition,
+            right: '0'
+          })
         }
       }
-    });
-
+    })
   }
 
   function headerSetup() {

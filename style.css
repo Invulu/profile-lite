@@ -7,7 +7,7 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.0.4
+	Version: 1.0.7
 	Text Domain: profile-lite
 	Domain Path: /languages/
 	Tags: blog, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
@@ -468,6 +468,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 .custom-logo-link {
 	display: block;
+	max-width: 300px;
 	line-height: 0;
 	margin: 0px;
 	padding: 0px;
@@ -565,10 +566,17 @@ div.menu ul ul li {
 ul.menu li:hover li ul,
 div.menu ul li:hover li ul {
 	top: -9999px;
-	opacity: 1;
+	opacity: 0;
+}
+ul.menu li:hover li li ul,
+div.menu ul li:hover li li ul {
+	top: -9999px;
+	opacity: 0;
 }
 ul.menu li li:hover ul,
-ul.menu li li[aria-expanded="true"] ul {
+ul.menu li li[aria-expanded="true"] ul,
+ul.menu li li li:hover ul,
+ul.menu li li li[aria-expanded="true"] ul {
 	left: 240px; /* match ul width */
 	top: 0;
 	opacity: 1;
@@ -1221,28 +1229,29 @@ img.hide-img {
 	padding: 0px;
 }
 img.aligncenter,
-.wp-block-image.aligncenter {
-	display: block;
-	margin: 12px auto;
+.wp-block-image.aligncenter,
+.wp-block-image .aligncenter {
+	text-align: center;
+	margin: 16px auto;
 	padding: 0px;
 }
 img.alignnone,
-.wp-block-image.alignnone {
+.wp-block-image.alignnone,
+.wp-block-image .alignnone {
+	margin: 16px 0px;
 	padding: 0px;
-	margin: 12px 0px;
-	display: inline;
 }
 img.alignright,
-.wp-block-image.alignright {
-	padding: 0px;
+.wp-block-image.alignright,
+.wp-block-image .alignright {
 	margin: 16px 0px 16px 24px;
-	display: inline;
+	padding: 0px;
 }
 img.alignleft,
-.wp-block-image.alignleft {
-	display: inline;
-	padding: 0px;
+.wp-block-image.alignleft,
+.wp-block-image .alignleft {
 	margin: 16px 24px 16px 0px;
+	padding: 0px;
 }
 .alignwide, .alignfull {
 	position: relative;
@@ -2147,14 +2156,6 @@ blockquote[class*="wp-block"] {
 }
 .profile-has-logo.profile-header-active.profile-has-social-menu.profile-singular .organic-widgets-section .hentry {
 	margin-top: 0px;
-}
-.organic-widgets-testimonial-section .flex-viewport {
-	padding-left: 12px;
-	padding-right: 12px;
-}
-.organic-widgets-testimonial-section .flex-viewport .slides {
-	padding: 0px;
-	overflow: visible;
 }
 .organic-widgets-testimonial-avatar,
 .organic-widgets-testimonial-slide-content {

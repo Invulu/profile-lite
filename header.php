@@ -62,7 +62,7 @@
 			<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 
 				<!-- BEGIN #navigation -->
-				<nav id="navigation" class="navigation-main" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'profile-lite' ); ?>">
+				<nav id="navigation" class="navigation-main" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'profile-lite' ); ?>">
 
 					<?php
 						wp_nav_menu( array(
@@ -141,7 +141,7 @@
 
 				<?php if ( has_nav_menu( 'social-menu' ) ) { ?>
 
-				<nav role="navigation" aria-label="<?php esc_html_e( 'Social Navigation', 'profile-lite' ); ?>">
+				<nav role="navigation" aria-label="<?php esc_attr_e( 'Social Navigation', 'profile-lite' ); ?>">
 
 					<?php
 					wp_nav_menu( array(

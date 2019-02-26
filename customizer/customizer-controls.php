@@ -65,7 +65,7 @@ class Profile_Lite_Multiple_Select_Control extends WP_Customize_Control {
 				<?php
 				foreach ( $this->choices as $value => $label ) {
 					$selected = ( in_array( $value, $this->value() ) ) ? selected( 1, 1, false ) : '';
-					echo '<option value="' . esc_attr( $value ) . '"' . esc_attr( $selected ) . '>' . esc_attr( $label ) . '</option>';
+					echo '<option value="' . esc_attr( $value ) . '"' . esc_attr( $selected ) . '>' . esc_html( $label ) . '</option>';
 				}
 				?>
 			</select>

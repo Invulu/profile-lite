@@ -110,3 +110,4 @@ if ( $blog_query->have_posts() ) :
 	</article>
 
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>

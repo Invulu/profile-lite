@@ -59,6 +59,7 @@
 
 .profile-has-logo.profile-no-img.profile-header-inactive.profile-has-social-menu.profile-singular .hentry,
 .profile-has-logo.profile-header-active.profile-has-social-menu.profile-singular .hentry,
+.profile-has-logo.profile-has-social-menu .home-page .entry-content,
 .profile-has-logo.profile-has-social-menu.error404 .entry-content,
 .profile-has-logo.profile-has-social-menu.blog .container > .hentry {
 	margin-top: 96px;

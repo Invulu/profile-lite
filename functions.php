@@ -36,8 +36,8 @@ if ( ! function_exists( 'profile_lite_setup' ) ) :
 		*/
 		add_theme_support( 'post-thumbnails' );
 
-		add_image_size( 'profile-featured-large', 2400, 1800, true ); // Large Featured Image.
-		add_image_size( 'profile-featured-medium', 1200, 1200, false ); // Medium Featured Image.
+		add_image_size( 'profile-lite-featured-large', 2400, 1800, true ); // Large Featured Image.
+		add_image_size( 'profile-lite-featured-medium', 1200, 1200, false ); // Medium Featured Image.
 
 		/*
 		* Enable support for site title tag.
@@ -53,8 +53,8 @@ if ( ! function_exists( 'profile_lite_setup' ) ) :
 		* Enable support for custom logo.
 		*/
 		add_theme_support( 'custom-logo', array(
-			'height'      => 280,
-			'width'       => 280,
+			'height'      => 300,
+			'width'       => 300,
 			'flex-height' => true,
 			'flex-width'  => true,
 		) );
@@ -155,6 +155,105 @@ function profile_lite_gutenberg_styles() {
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'profile_lite_gutenberg_styles' );
+
+/*
+-------------------------------------------------------------------------------------------------------
+	Admin Support and Upgrade Link
+-------------------------------------------------------------------------------------------------------
+*/
+
+function profile_lite_support_link() {
+	global $submenu;
+	$support_link = esc_url( 'https://organicthemes.com/support/' );
+	$submenu['themes.php'][] = array( __( 'Theme Support', 'profile-lite' ), 'manage_options', $support_link );
+}
+add_action( 'admin_menu', 'profile_lite_support_link' );
+
+function profile_lite_upgrade_link() {
+	global $submenu;
+	$upgrade_link = esc_url( 'https://organicthemes.com/theme/profile-theme/?utm_source=lite_upgrade' );
+	$submenu['themes.php'][] = array( __( 'Theme Upgrade', 'profile-lite' ), 'manage_options', $upgrade_link );
+}
+add_action( 'admin_menu', 'profile_lite_upgrade_link' );
+
+/*
+-------------------------------------------------------------------------------------------------------
+	Admin Notice
+-------------------------------------------------------------------------------------------------------
+*/
+
+/** Function profile_lite_admin_notice */
+function profile_lite_admin_notice() {
+	if ( ! PAnD::is_admin_notice_active( 'notice-profile-lite-forever' ) ) {
+		return;
+	}
+	?>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=246727095428680";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<script>window.twttr = (function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0],
+		t = window.twttr || {};
+		if (d.getElementById(id)) return t;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "https://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js, fjs);
+
+		t._e = [];
+		t.ready = function(f) {
+			t._e.push(f);
+		};
+
+		return t;
+	}(document, "script", "twitter-wjs"));</script>
+
+	<div data-dismissible="notice-profile-lite-forever" class="notice updated is-dismissible">
+
+		<p><?php printf( __( 'Enter your email to receive updates and information from <a href="%1$s" target="_blank">Organic Themes</a>. For instructions please refer to our <a href="%2$s" target="_blank">theme setup guide</a>. Upgrade to <a href="%3$s" target="_blank">premium version</a> for more options and support.', 'profile-lite' ), 'https://organicthemes.com/themes/', 'https://organicthemes.com/profile-lite-free-personal-theme/', 'https://organicthemes.com/theme/profile-theme/' ); ?></p>
+
+		<div class="follows" style="overflow: hidden; margin-bottom: 12px;">
+
+			<div id="mc_embed_signup" class="clear" style="float: left;">
+				<form action="//organicthemes.us1.list-manage.com/subscribe/post?u=7cf6b005868eab70f031dc806&amp;id=c3cce2fac0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						<div class="mc-field-group" style="float: left;">
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+						</div>
+						<div style="float: left; margin-left: 6px;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7cf6b005868eab70f031dc806_c3cce2fac0" tabindex="-1" value=""></div>
+					</div>
+				</form>
+			</div>
+
+			<div class="social-links" style="float: left; margin-left: 24px; margin-top: 4px;">
+				<div class="fb-like" style="float: left;" data-href="https://www.facebook.com/OrganicThemes/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+				<div class="twitter-follow" style="float: left; margin-left: 6px;"><a class="twitter-follow-button" href="https://twitter.com/OrganicThemes" data-show-count="false">Follow @OrganicThemes</a></div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+	<!--End mc_embed_signup-->
+	<?php
+}
+add_action( 'admin_init', array( 'PAnD', 'init' ) );
+add_action( 'admin_notices', 'profile_lite_admin_notice' );
+
+require( get_template_directory() . '/includes/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php' );
 
 /*
 -------------------------------------------------------------------------------------------------------

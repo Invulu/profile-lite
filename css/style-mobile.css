@@ -112,6 +112,9 @@
 	#side-menu {
 		display: block;
 	}
+	.admin-bar #side-menu {
+		margin-top: 32px;
+	}
 	#menu-toggle {
 		display: inline-block;
 		cursor: pointer;
@@ -125,10 +128,10 @@
 		z-index: 9;
 	}
 	#menu-toggle svg {
-		fill: rgba(0, 0, 0, 0.4);
+		fill: rgba(255, 255, 255, 0.4);
 	}
 	#menu-toggle:hover svg {
-		fill: rgba(0, 0, 0, 1);
+		fill: rgba(255, 255, 255, 1);
 	}
 	.sidr {
 		display: block;
@@ -268,6 +271,12 @@
 
 	/* Theme Phone */
 
+	#wpadminbar {
+		position: fixed;
+	}
+	.admin-bar #side-menu {
+		margin-top: 46px;
+	}
 	#nav-bar {
 		float: right;
 		position: relative;
@@ -294,7 +303,7 @@
 	}
 	.blog .content,
 	.archive .content {
-		padding: 36px 24px;
+		padding: 24px;
 	}
 	.blog-holder,
 	.archive-holder {
@@ -314,7 +323,10 @@
 		display: none;
 	}
 	.sidebar {
-		margin: 12px 0px;
+		margin: 36px 0px 0px 0px;
+	}
+	.footer {
+		padding: 24px;
 	}
 
 	/* Images */

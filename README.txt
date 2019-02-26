@@ -1,6 +1,6 @@
 === Profile Lite ===
 
-Version: 1.0.4
+Version: 1.0.7
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.9
@@ -46,6 +46,27 @@ Profile Lite is distributed under the terms of the GNU GPL
 * TGM-Plugin-Activation (plugin-activation.php, plugin-activation-class.php), Released under the GPL v2 license, http://opensource.org/licenses/gpl-2.0.php
 
 == Changelog ==
+
+== 1.0.7 ==
+* Added admin notification
+* Added theme support menu link
+* Added theme upgrade menu link
+* Minor style tweaks
+
+== 1.0.6 ==
+* More fixes mobile menu covering admin menu
+* Additional mobile style tweaks
+
+== 1.0.5 ==
+* Menu offset jQuery updates
+* Gutenberg block alignment style fixes
+* Fixed escaping in customizer-controls.php
+* Removed text reference to GivingPress Lite theme
+* Reset blog query in loop-blog.php
+* Fixed mobile menu covering admin menu
+* Added proper prefix to featured image sizes
+* Updated aria label escaping
+* Added max-width to logo image
 
 == 1.0.4 ==
 * Default header image updated again to Stock Snap image
