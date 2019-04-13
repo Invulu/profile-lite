@@ -558,11 +558,24 @@ if ( ! function_exists( 'profile_lite_body_class' ) ) :
 		$header_image = get_header_image();
 		$post_pages   = is_home() || is_archive() || is_search() || is_attachment();
 
+		global $post;
+		if ( $post ) {
+			$page_template = get_page_template_slug( $post->ID );
+		} else {
+			$page_template = false;
+		}
+
+		if ( is_page_template( 'template-home.php' ) && ! empty( $post->post_excerpt ) && 'templates/organic-custom-template.php' !== $page_template ) {
+			$classes[] = 'profile-has-excerpt';
+		}
+
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-			$classes[] = 'profile-has-logo'; }
+			$classes[] = 'profile-has-logo';
+		}
 
 		if ( is_page_template( 'template-slideshow.php' ) ) {
-			$classes[] = 'profile-slideshow'; }
+			$classes[] = 'profile-slideshow';
+		}
 
 		if ( 'blank' != get_theme_mod( 'profile_lite_site_tagline' ) ) {
 			$classes[] = 'profile-desc-active';
@@ -582,7 +595,7 @@ if ( ! function_exists( 'profile_lite_body_class' ) ) :
 		if ( is_singular() && has_post_thumbnail() ) {
 			$classes[] = 'profile-has-img'; }
 
-		if ( $post_pages && ! empty( $header_image ) || is_page() && ! has_post_thumbnail() && ! empty( $header_image ) || is_single() && ! has_post_thumbnail() && ! empty( $header_image ) ) {
+		if ( $post_pages && ! empty( $header_image ) || is_page() && has_post_thumbnail() || is_page() && ! empty( $header_image ) || is_single() && ! has_post_thumbnail() && ! empty( $header_image ) ) {
 			$classes[] = 'profile-header-active';
 		} else {
 			$classes[] = 'profile-header-inactive';

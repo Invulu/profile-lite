@@ -15,12 +15,12 @@ if ( have_posts() ) :
 		the_post();
 		?>
 
+	<!-- BEGIN .entry-content -->
+	<article class="entry-content">
+
 		<?php if ( ! has_post_thumbnail() || '' == get_theme_mod( 'display_img_title_post', '1' ) ) { ?>
 			<h1 class="entry-header"><?php the_title(); ?></h1>
 		<?php } ?>
-
-	<!-- BEGIN .entry-content -->
-	<article class="entry-content">
 
 		<?php the_content( /* translators: 1: Permalink. */ sprintf( esc_html__( 'Continue reading%s', 'profile-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>', false ) ); ?>
 

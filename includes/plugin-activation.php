@@ -38,6 +38,16 @@ function profile_lite_register_required_plugins() {
 				'slug'     => 'organic-profile-block', // The plugin slug (typically the folder name).
 				'required' => false, // If false, the plugin is only 'recommended' instead of required.
 			),
+			array(
+				'name'     => 'Widget Area Block', // The plugin name.
+				'slug'     => 'organic-widget-area-block', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
+				'name'     => 'WPForms', // The plugin name.
+				'slug'     => 'wpforms-lite', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
 
 		);
 
@@ -51,8 +61,18 @@ function profile_lite_register_required_plugins() {
 				'required' => false, // If false, the plugin is only 'recommended' instead of required.
 			),
 			array(
+				'name'     => 'Widget Area Block', // The plugin name.
+				'slug'     => 'organic-widget-area-block', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
 				'name'     => 'Organic Builder Widgets', // The plugin name.
 				'slug'     => 'organic-customizer-widgets', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
+				'name'     => 'WPForms', // The plugin name.
+				'slug'     => 'wpforms-lite', // The plugin slug (typically the folder name).
 				'required' => false, // If false, the plugin is only 'recommended' instead of required.
 			),
 

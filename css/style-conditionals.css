@@ -14,6 +14,9 @@
 .site-info.profile-lite-bg-dark .site-title a:visited {
 	color: #ffffff;
 }
+#custom-header.profile-lite-bg-light .img-title .post-author {
+	background: rgba(255, 255, 255, 0.12);
+}
 #custom-header.profile-lite-bg-dark p,
 .site-info.profile-lite-bg-dark .site-description {
 	color: rgba(255, 255, 255, 0.8);
@@ -68,13 +71,13 @@
 
 /* Body Class */
 
-.profile-has-logo.profile-no-img.profile-header-inactive.profile-has-social-menu.profile-singular .hentry,
-.profile-has-logo.profile-header-active.profile-has-social-menu.profile-singular .hentry,
+.profile-has-logo.profile-has-social-menu.profile-singular .entry-content,
 .profile-has-logo.profile-has-social-menu .home-page .entry-content,
 .profile-has-logo.profile-has-social-menu.error404 .entry-content,
 .profile-has-logo.profile-has-social-menu.blog .container > .hentry {
-	margin-top: 96px;
+	margin-top: 72px;
 }
+.page.profile-has-logo.profile-header-active.profile-has-social-menu .hentry,
 .organic-widgets-custom-template.profile-has-logo.profile-header-active.profile-has-social-menu.profile-singular .hentry {
 	margin-top: 0px;
 }
@@ -143,8 +146,11 @@
 	min-height: 640px;
 }
 .profile-header-video-inactive.profile-header-active .wp-custom-header {
-	min-height: 420px;
-	max-height: calc(100vh - 120px);
+	min-height: 640px;
+	max-height: calc(100vh - 240px);
+}
+.profile-header-video-inactive.profile-header-active.profile-has-excerpt .wp-custom-header {
+	min-height: 760px;
 }
 .profile-header-inactive.profile-desc-active #masthead .site-description {
 	padding-top: 48px;

@@ -110,7 +110,7 @@
 		}
 		?>
 
-		<?php if ( is_page_template( 'template-home.php' ) || is_front_page() || is_singular() && ! has_post_thumbnail() || is_home() || is_archive() || is_search() || is_attachment() || is_404() ) { ?>
+		<?php if ( is_page_template( 'template-home.php' ) || is_singular() && ! has_post_thumbnail() || is_home() || is_archive() || is_search() || is_attachment() || is_404() ) { ?>
 
 			<!-- BEGIN #custom-header -->
 			<div id="custom-header">
