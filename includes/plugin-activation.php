@@ -44,7 +44,7 @@ function profile_lite_register_required_plugins() {
 				'required' => false, // If false, the plugin is only 'recommended' instead of required.
 			),
 			array(
-				'name'     => 'WPForms', // The plugin name.
+				'name'     => 'Contact Form by WPForms', // The plugin name.
 				'slug'     => 'wpforms-lite', // The plugin slug (typically the folder name).
 				'required' => false, // If false, the plugin is only 'recommended' instead of required.
 			),
@@ -71,7 +71,7 @@ function profile_lite_register_required_plugins() {
 				'required' => false, // If false, the plugin is only 'recommended' instead of required.
 			),
 			array(
-				'name'     => 'WPForms', // The plugin name.
+				'name'     => 'Contact Form by WPForms', // The plugin name.
 				'slug'     => 'wpforms-lite', // The plugin slug (typically the folder name).
 				'required' => false, // If false, the plugin is only 'recommended' instead of required.
 			),

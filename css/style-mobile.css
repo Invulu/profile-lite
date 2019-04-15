@@ -87,11 +87,18 @@
 		top: 0;
 		width: 100%;
 	}
+	.site-info {
+		float: left;
+		max-width: 80%;
+	}
 	.site-info .site-title {
 		font-size: 1.6rem;
-		letter-spacing: 8px;
+		letter-spacing: 6px;
+		text-align: left;
 	}
 	.site-info .site-description {
+		text-align: left;
+		line-height: 1.6;
 		padding: 0px;
 	}
 	#custom-header {
@@ -285,18 +292,15 @@
 		margin-right: 24px;
 	}
 	.site-info {
-		float: left;
-		max-width: 80%;
+		max-width: 260px;
+		padding: 18px;
 	}
 	.site-info .site-title {
 		font-size: 1.2rem;
 		letter-spacing: 4px;
-		text-align: left;
 	}
 	.site-info .site-description {
 		font-size: 0.9rem;
-		text-align: left;
-		line-height: 1.7;
 	}
 	.content {
 		padding: 36px;
@@ -324,9 +328,6 @@
 	}
 	.sidebar {
 		margin: 36px 0px 0px 0px;
-	}
-	.footer {
-		padding: 24px;
 	}
 
 	/* Images */

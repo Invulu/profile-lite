@@ -7,7 +7,7 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.1
+	Version: 1.1.1
 	Text Domain: profile-lite
 	Domain Path: /languages/
 	Tags: blog, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
@@ -491,7 +491,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	font-weight: 500;
 	text-align: center;
 	text-transform: uppercase;
-	margin: 0px;
+	margin: 0px auto;
 	padding: 0px;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;

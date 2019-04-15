@@ -36,30 +36,30 @@
 .site-info.profile-lite-bg-light .site-description {
 	color: rgba(0, 0, 0, 0.8);
 }
-.profile-lite-bg-dark h1, .profile-lite-bg-dark h2, .profile-lite-bg-dark h3,
-.profile-lite-bg-dark h4, .profile-lite-bg-dark h5, .profile-lite-bg-dark h6,
+.container .profile-lite-bg-dark h1, .container .profile-lite-bg-dark h2, .container .profile-lite-bg-dark h3,
+.container .profile-lite-bg-dark h4, .container .profile-lite-bg-dark h5, .container .profile-lite-bg-dark h6,
 .profile-lite-bg-light .profile-lite-bg-dark h1, .profile-lite-bg-light .profile-lite-bg-dark h2,
 .profile-lite-bg-light .profile-lite-bg-dark h3, .profile-lite-bg-light .profile-lite-bg-dark h4,
 .profile-lite-bg-light .profile-lite-bg-dark h5, .profile-lite-bg-light .profile-lite-bg-dark h6,
-.profile-lite-bg-light .profile-lite-bg-dark .img-headline, .profile-lite-bg-dark .img-headline {
+.profile-lite-bg-light .profile-lite-bg-dark .img-headline, .container .profile-lite-bg-dark .img-headline {
 	color: #ffffff;
 }
-.profile-lite-bg-dark, .profile-lite-bg-dark p, .profile-lite-bg-dark blockquote,
-.profile-lite-bg-light .profile-lite-bg-dark, .profile-lite-bg-light .profile-lite-bg-dark p,
-.profile-lite-bg-light .profile-lite-bg-dark blockquote {
+.container .profile-lite-bg-dark, .container .profile-lite-bg-dark p, .container .profile-lite-bg-dark blockquote,
+.container .profile-lite-bg-light .profile-lite-bg-dark, .container .profile-lite-bg-light .profile-lite-bg-dark p,
+.container .profile-lite-bg-light .profile-lite-bg-dark blockquote {
 	color: rgba(255, 255, 255, 0.8);
 }
-.profile-lite-bg-light h1, .profile-lite-bg-light h2, .profile-lite-bg-light h3,
-.profile-lite-bg-light h4, .profile-lite-bg-light h5, .profile-lite-bg-light h6,
+.container .profile-lite-bg-light h1, .container .profile-lite-bg-light h2, .container .profile-lite-bg-light h3,
+.container .profile-lite-bg-light h4, .container .profile-lite-bg-light h5, .container .profile-lite-bg-light h6,
 .profile-lite-bg-dark .profile-lite-bg-light h1, .profile-lite-bg-dark .profile-lite-bg-light h2,
 .profile-lite-bg-dark .profile-lite-bg-light h3, .profile-lite-bg-dark .profile-lite-bg-light h4,
 .profile-lite-bg-dark .profile-lite-bg-light h5, .profile-lite-bg-dark .profile-lite-bg-light h6,
-.profile-lite-bg-dark .profile-lite-bg-light .img-headline, .profile-lite-bg-light .img-headline {
+.profile-lite-bg-dark .profile-lite-bg-light .img-headline, .container .profile-lite-bg-light .img-headline {
 	color: #000000;
 }
-.profile-lite-bg-light, .profile-lite-bg-light p, .profile-lite-bg-light blockquote,
-.profile-lite-bg-dark .profile-lite-bg-light, .profile-lite-bg-dark .profile-lite-bg-light p,
-.profile-lite-bg-dark .profile-lite-bg-light blockquote {
+.container .profile-lite-bg-light, .container .profile-lite-bg-light p, .container .profile-lite-bg-light blockquote,
+.container .profile-lite-bg-dark .profile-lite-bg-light, .container .profile-lite-bg-dark .profile-lite-bg-light p,
+.container .profile-lite-bg-dark .profile-lite-bg-light blockquote {
 	color: rgba(0, 0, 0, 0.6);
 }
 .profile-lite-bg-light .img-title .post-author a {
@@ -71,7 +71,7 @@
 
 /* Body Class */
 
-.profile-has-logo.profile-has-social-menu.profile-singular .entry-content,
+.profile-has-logo.profile-has-social-menu.page .entry-content,
 .profile-has-logo.profile-has-social-menu .home-page .entry-content,
 .profile-has-logo.profile-has-social-menu.error404 .entry-content,
 .profile-has-logo.profile-has-social-menu.blog .container > .hentry {

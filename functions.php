@@ -183,7 +183,7 @@ add_action( 'admin_menu', 'profile_lite_upgrade_link' );
 */
 
 /** Function profile_lite_admin_notice */
-function profile_lite_admin_notice() {
+function profile_lite_admin_notice_follow() {
 	if ( ! PAnD::is_admin_notice_active( 'notice-profile-lite-forever' ) ) {
 		return;
 	}
@@ -250,8 +250,28 @@ function profile_lite_admin_notice() {
 	<!--End mc_embed_signup-->
 	<?php
 }
+
+/** Function profile_lite_admin_notice_review */
+function profile_lite_admin_notice_review() {
+	if ( ! PAnD::is_admin_notice_active( 'notice-profile-lite-review-30' ) ) {
+		return;
+	}
+	?>
+
+	<div data-dismissible="notice-profile-lite-review-30" class="notice updated is-dismissible">
+
+		<p><?php printf( wp_kses_post( '🍍 Aloha! Mahalo for using the <a href="%1$s" target="_blank">Profile Lite</a> theme. As a <b>BIG</b> favor, could you please take a moment to <a href="%2$s" target="_blank">leave a positive review</a> for this theme. It takes a great deal of time to build and maintain a free product such as this, and your support is greatly appreciated.', 'profile-lite' ), 'https://organicthemes.com/theme/profile-lite/', 'https://wordpress.org/support/theme/profile-lite/reviews/#new-post' ); ?></p>
+		<p><b><?php esc_html_e( '&mdash; David Morgan', 'profile-lite' ); ?></b><br/>
+		<b><?php printf( wp_kses_post( 'Co-founder of <a href="%1$s" target="_blank">Organic Themes</a>', 'profile-lite' ), 'https://organicthemes.com/' ); ?></b></p>
+
+	</div>
+
+	<?php
+}
+
 add_action( 'admin_init', array( 'PAnD', 'init' ) );
-add_action( 'admin_notices', 'profile_lite_admin_notice' );
+add_action( 'admin_notices', 'profile_lite_admin_notice_follow', 10 );
+add_action( 'admin_notices', 'profile_lite_admin_notice_review', 10 );
 
 require( get_template_directory() . '/includes/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php' );
 

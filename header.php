@@ -132,7 +132,7 @@
 			<!-- END #custom-header -->
 			</div>
 
-			<?php if ( has_custom_logo() || has_custom_logo() && 'templates/organic-custom-template.php' !== $page_template ) { ?>
+			<?php if ( has_custom_logo() && ! is_single() || has_custom_logo() && 'templates/organic-custom-template.php' !== $page_template && ! is_single() ) { ?>
 
 			<!-- BEGIN .site-logo -->
 			<div class="site-logo">
