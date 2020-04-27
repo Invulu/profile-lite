@@ -44,8 +44,8 @@ function profile_lite_fonts_url() {
 		}
 
 		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => rawurlencode( implode( '|', $font_families ) ),
+			'subset' => rawurlencode( 'latin,latin-ext' ),
 		);
 
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
@@ -73,3 +73,16 @@ function profile_lite_editor_styles() {
 	add_editor_style( array( 'style.css', profile_lite_fonts_url() ) );
 }
 add_action( 'after_setup_theme', 'profile_lite_editor_styles' );
+
+if ( ! function_exists( 'profile_lite_block_editor_styles' ) ) {
+
+	/**
+	 * Add Google Scripts for use with the block editor
+	 *
+	 * @since Organic Profile 1.0
+	 */
+	function profile_lite_block_editor_styles() {
+		wp_enqueue_style( 'profile-lite-fonts', profile_lite_fonts_url(), array(), '1.0' );
+	}
+}
+add_action( 'enqueue_block_editor_assets', 'profile_lite_block_editor_styles' );

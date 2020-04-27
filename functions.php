@@ -153,6 +153,12 @@ function profile_lite_gutenberg_styles() {
 		'1.0',
 		'all'
 	);
+	wp_enqueue_style(
+		'font-awesome',
+		get_template_directory_uri() . '/css/font-awesome.css',
+		array( 'profile-lite-gutenberg' ),
+		'1.0'
+	);
 }
 add_action( 'enqueue_block_editor_assets', 'profile_lite_gutenberg_styles' );
 

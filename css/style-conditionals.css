@@ -111,6 +111,26 @@
 	margin-left: 0px;
 	margin-right: 0px;
 }
+.profile-sidebar-inactive.profile-singular .sixteen .alignwide,
+.profile-sidebar-inactive.profile-singular .full-width .alignwide {
+	width: calc(100% + 96px);
+	left: -48px;
+}
+.profile-sidebar-inactive.profile-singular .alignfull .alignfull,
+.profile-sidebar-inactive.profile-singular .alignwide .alignwide,
+.profile-sidebar-inactive.profile-singular .alignfull .alignwide,
+.profile-sidebar-inactive.profile-singular .alignwide .alignfull {
+	max-width: 100%;
+	left: auto;
+}
+.profile-sidebar-inactive.profile-singular .wp-block-columns.alignwide {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.profile-sidebar-inactive.profile-singular .wp-block-columns.alignfull {
+	padding-left: 36px;
+	padding-right: 36px;
+}
 .profile-header-video-active #custom-header {
 	max-height: 720px;
 }
