@@ -1,10 +1,9 @@
 === Profile Lite ===
 
-Version: 1.2
+Version: 1.2.1
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
 Requires at least: 4.9
-Tested up to: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +45,13 @@ Profile Lite is distributed under the terms of the GNU GPL
 * TGM-Plugin-Activation (plugin-activation.php, plugin-activation-class.php), Released under the GPL v2 license, http://opensource.org/licenses/gpl-2.0.php
 
 == Changelog ==
+
+== 1.2.1 ==
+* Gutenberg updates
+* Added new stylesheet tags
+* Better handling of plugin recommendation
+* Updated attribute escaping in footer
+* Added wp_body_open action in header.php
 
 == 1.2 ==
 * Significant Gutenberg updates
@@ -109,7 +115,7 @@ Profile Lite is distributed under the terms of the GNU GPL
 
 == 1.0.1 ==
 * Fixed error associated with wp_kses_post function in header
-* Replaced default-header.jpg with an image from Pixabay
+* Replaced default-header.jpg image
 * Removed unused featured image sizes
 * Various style and script updates
 

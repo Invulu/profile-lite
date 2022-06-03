@@ -23,6 +23,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php wp_body_open(); ?>
+
 <!-- BEGIN #wrapper -->
 <div id="wrapper">
 
@@ -82,7 +84,7 @@
 
 				<button type="button" id="menu-toggle" class="menu-toggle" href="#sidr">
 					<svg class="icon-menu-open" version="1.1" id="icon-open" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+						width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 						<rect y="2" width="24" height="2"/>
 						<rect y="11" width="24" height="2"/>
 						<rect y="20" width="24" height="2"/>

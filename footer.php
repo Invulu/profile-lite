@@ -51,7 +51,7 @@
 
 				<?php if ( has_nav_menu( 'social-menu' ) && ! is_page_template( 'template-home.php' ) ) { ?>
 
-				<nav class="align-right" role="navigation" aria-label="<?php esc_html_e( 'Social Navigation', 'profile-lite' ); ?>">
+				<nav class="align-right" role="navigation" aria-label="<?php esc_attr_e( 'Social Navigation', 'profile-lite' ); ?>">
 
 					<?php
 					wp_nav_menu( array(
