@@ -10,18 +10,9 @@
 
 <?php $blog_query['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; ?>
 
-<?php $blog_cats = get_theme_mod( 'profile_lite_blog_category', '0' ); ?>
-<?php
-if ( is_array( $blog_cats ) && ! empty( $blog_cats ) ) {
-	$categories = implode( ',', $blog_cats );
-} else {
-	$categories = '';
-}
-?>
-
 <?php
 $blog_query = new WP_Query( array(
-	'cat'              => $categories,
+	'cat'              => get_theme_mod( 'profile_lite_blog_category', '0' ),
 	'paged'            => $paged,
 	'suppress_filters' => 0,
 ) );

@@ -1,9 +1,9 @@
 === Profile Lite ===
 
-Version: 1.2.1
+Version: 1.3
 Contributors: organicthemes, itsdavidmorgan
 Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, custom-logo, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
-Requires at least: 4.9
+Requires at least: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,15 @@ Profile Lite is distributed under the terms of the GNU GPL
 * TGM-Plugin-Activation (plugin-activation.php, plugin-activation-class.php), Released under the GPL v2 license, http://opensource.org/licenses/gpl-2.0.php
 
 == Changelog ==
+
+== 1.3 ==
+* Gutenberg updates
+* Updated Font Awesome
+* Updated deprectated window load jQuery
+* Fixed blog category select Customizer option
+* Added new social media icons
+* Added new Gutenberg support functions
+* Updated admin notifications
 
 == 1.2.1 ==
 * Gutenberg updates

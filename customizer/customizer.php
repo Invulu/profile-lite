@@ -15,7 +15,6 @@
  */
 function profile_lite_theme_customizer( $wp_customize ) {
 
-	include( get_template_directory() . '/customizer/customizer-controls.php' );
 	include( get_template_directory() . '/customizer/customizer-sanitize.php' );
 
 	/**
@@ -135,13 +134,13 @@ function profile_lite_theme_customizer( $wp_customize ) {
 		// Blog Categories.
 		$wp_customize->add_setting( 'profile_lite_blog_category', array(
 			'default'           => '0',
-			'sanitize_callback' => 'profile_lite_sanitize_multi_select',
+			'sanitize_callback' => 'sanitize_key',
 		) );
-		$wp_customize->add_control( new Profile_Lite_Multiple_Select_Control( $wp_customize, 'profile_lite_blog_category', array(
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'profile_lite_blog_category', array(
 			'settings' => 'profile_lite_blog_category',
 			'label'    => __( 'Select Blog Categories', 'profile-lite' ),
 			'section'  => 'profile_lite_templates_section',
-			'type'     => 'multiple-select',
+			'type'     => 'select',
 			'choices'  => profile_lite_blog_categories(),
 			'priority' => 20,
 		) ) );

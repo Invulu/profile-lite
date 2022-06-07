@@ -113,6 +113,6 @@
   .on( 'post-load', modifyPosts );
 
   $( window )
-  .load( headerSetup );
+  .on( 'load', headerSetup );
 
 })( jQuery );

@@ -29,8 +29,8 @@
         contentSelectors = [contentSelectors];
       }
 
-      //Loop Through all Items
-      $.each(el, function(key, value){
+      // Loop Through all Items
+      $.each(el, function(key, value) {
 
         //Initialize
         var r,g,b,brightness;
@@ -82,7 +82,7 @@
         var bg = el.css("backgroundImage");
         bg = bg.replace(/^url\(['"]?/, "").replace(/['"]?\)$/, "");
 
-        getImageLightness( bg, el ,function(brightness,el){
+        getImageLightness( bg, el, function(brightness, el) {
 
           // Set classes to add and to remove
           if (brightness < threshold) {
@@ -95,21 +95,21 @@
 
           // Add and remove classes
           // If applying to self
-          if (!contentSelectors ){
+          if (!contentSelectors ) {
             if ( !el.hasClass("profile-lite-bg-img") ) el.addClass("profile-lite-bg-img");
             el.removeClass(removeClass);
             el.addClass(addClass);
           }
           // If applying to custom selectors
           else {
-            contentSelectors.forEach(function(contentSelector){
+            contentSelectors.forEach(function(contentSelector) {
               if ( !$(contentSelector).hasClass("profile-lite-bg-img") ) $(contentSelector).addClass("profile-lite-bg-img");
               $(contentSelector).removeClass(removeClass);
               $(contentSelector).addClass(addClass);
             });
           }
 
-          }); // End getImageLightness(){}
+        }); // End getImageLightness(){}
 
       } // End getBackgroundImageLuminosity(){}
 

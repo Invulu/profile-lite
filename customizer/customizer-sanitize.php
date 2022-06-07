@@ -7,24 +7,6 @@
  */
 
 /**
- * Sanitize Mulitple Selection.
- *
- * @param array $input Sanitizes user input.
- * @return array
- */
-function profile_lite_sanitize_multi_select( $input ) {
-	$valid = profile_lite_blog_categories();
-
-	foreach ( $input as $value ) {
-		if ( ! array_key_exists( $value, $valid ) ) {
-			return;
-		}
-	}
-
-	return $input;
-}
-
-/**
  * Sanitize Pages.
  *
  * @param array $input Sanitizes user input.
